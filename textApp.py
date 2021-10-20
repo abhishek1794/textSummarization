@@ -1,6 +1,6 @@
 import warnings
 warnings.filterwarnings("ignore")
-import torch
+#import torch
 
 #pip install bert-extractive-summarizer
 from summarizer import Summarizer
