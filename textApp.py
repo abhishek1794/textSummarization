@@ -37,4 +37,7 @@ def text_request():
 
 
 if __name__=='__main__':
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    });
