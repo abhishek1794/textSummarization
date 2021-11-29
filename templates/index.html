@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Text Summarization</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Text Summarizer</h1>
+    {% if content|length < 20 %}
+    <h4 style="text-align: center">There are no text to summarize. Provide one below! (*min length>60)</h4>
+    
+        <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Summarize">
+        </form>
+    </div>
+    {% else %}
+  	    <h4 style="text-align: center">Length Error</h4>
+
+    {% endif %}
+</div>
+{% endblock %}
